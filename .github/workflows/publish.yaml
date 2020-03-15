@@ -6,7 +6,7 @@ on:
 
 jobs:
         build:
-                name: Build the web site
+                name: Build and publish the web site
                 runs-on: ubuntu-latest
                 steps:
                         - name: Build Hugo
