@@ -6,7 +6,7 @@ on:
 
 jobs:
         build:
-                name: Greeting
+                name: Build and publish web site to hosting provider
                 runs-on: ubuntu-latest
                 steps:
                         - name: Hello world
@@ -16,7 +16,7 @@ jobs:
                           id: hello
                         - name: Echo the greeting's time
                           run: echo 'The time was ${{ steps.hello.outputs.time }}.'
-                        - name: Output the version of Hugo
-                          run: hugo version
                         - name: Build Hugo
                           uses: srt32/hugo-action@master
+                        - name: Output the version of Hugo
+                          run: hugo version
